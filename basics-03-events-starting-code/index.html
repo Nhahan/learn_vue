@@ -24,8 +24,8 @@
       <input 
         type="text" 
         v-on:input="setName($event, 'Kim')" 
-        <!-- v-on:keyup.enter="confirmname" -->
       >
+      <!-- v-on:keyup.enter="confirmname" -->
       <p>Your name: {{ name }}</p>
       <form v-on:submit.prevent="submitForm">
         <input type="text">
