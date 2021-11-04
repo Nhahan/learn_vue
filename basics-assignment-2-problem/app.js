@@ -1,17 +1,20 @@
 const app = Vue.createApp({
     data() {
-        username = ''
-        confirmname = ''
+        return {
+            // use ':', not '=' when set value for first rendering
+            userInput: '',
+            confirmname: ''
+        }
     },
     methods: {
-        keydownAlert() {
-            alert('keydown!')
+        showAlert() {
+            alert('ALERT!')
         },
         registerUser(event) {
-            this.username = event.target.value
+            this.userInput = event.target.value
         },
-        confirmname(event) {
-            this.confirmname = event.target.value
+        confirmUser() {
+            this.confirmname = this.userInput
         }
     },
 })
