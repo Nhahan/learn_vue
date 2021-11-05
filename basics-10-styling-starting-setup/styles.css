@@ -34,3 +34,6 @@ header {
   margin: 16px;
   border: 2px dashed #ccc;
 }
+.active {
+  border-color: rgb(255, 0, 0);
+  background-color: salmon;
