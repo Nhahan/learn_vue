@@ -18,7 +18,7 @@
     </header>
     <section id="assignment">
       <input type="text" v-model="userInput"/>
-      <p :class="{user1: user1boolean, user2: user2boolean}">
+      <p :class="computedClass">
         Style me!
       </p>
       <button @click="toggleParagraph">Toggle Paragraph</button>
@@ -26,8 +26,8 @@
       <!-- Clicking the button should toggle between the two options -->
 
       <!-- 3) Add dynamic inline styling to the below paragraph and let the user enter a background-color -->
-      <input v-show="showParagraph" :class="{user1: user1boolean, user2: user2boolean}" type="text" />
-      <p v-show="showParagraph" :class="{user1: user1boolean, user2: user2boolean}">Style me inline!</p>
+      <input v-show="showParagraph" :class="computedClass" type="text" />
+      <p v-show="showParagraph" :class="computedClass">Style me inline!</p>
     </section>
   </body>
 </html>
