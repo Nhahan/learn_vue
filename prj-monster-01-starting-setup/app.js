@@ -21,6 +21,9 @@ const app = Vue.createApp({
                 width: this.playerHealth + '%'
             };
         },
+        mayUserSpecialAttack() {
+            return this.currentRound % 3 !== 0
+        }
     },
     methods: {
         attackMonster() {
