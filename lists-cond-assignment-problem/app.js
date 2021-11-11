@@ -3,26 +3,34 @@ const app = Vue.createApp({
         return {
             taskInput: '',
             tasks: [],
-            struct: class taskClass {
-                constructor(key, task) {
-                    this.key = key;
-                    this.task = task;
-                }
-            }
-
+            key: 1,
+            hideAndShowText: 'Hide',
+            hideAndShowBoolean: true,
         }
     },
     methods: {
         submit() {
-            console.log("submit!")
+            const data = {
+                key: this.key,
+                task: this.taskInput,
+            }
 
-            const date = new Date();
-            const key = date.getHours() + date.getMinutes + date.getSeconds + date.getMilliseconds
+            this.key += 1
 
-            const newTask = new taskClass(key, this.taskInput)
-            
-            this.tasks.push(newTask);
+            this.tasks.push(this.taskInput);
         },
+        hideAndShow() {
+            if (this.hideAndShowBoolean) {
+                this.hideAndShowText = "Show"
+                this.hideAndShowBoolean = !this.hideAndShowBoolean
+            } else {
+                this.hideAndShowText = "Hide"
+                this.hideAndShowBoolean = !this.hideAndShowBoolean
+            }
+        },
+        removeTask(idx) {
+            this.tasks.splice(idx, 1)
+        }
     }
 })
 
