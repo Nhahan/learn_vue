@@ -1,0 +1,22 @@
+const app = Vue.createApp({
+    data() {
+        return {
+            friends: [
+                {
+                    id: "manuel",
+                    name: "Manuel Lorenz",
+                    phone: "1234",
+                    email: "manuel@localhost.com",
+                },
+                {
+                    id: "julie",
+                    name: "Julie Hones",
+                    phone: "5678",
+                    email: "julie@localhost.com",
+                },
+            ],
+        };
+    },
+});
+
+app.mount("#app");
