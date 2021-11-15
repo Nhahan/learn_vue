@@ -2,30 +2,15 @@
     <section>
         <h2>My Friends</h2>
         <ul>
-            <li></li>
+            <friend-contact></friend-contact>
+            <friend-contact></friend-contact>
         </ul>
     </section>
 </template>
 
 <script>
+import FriendContact from "./components/FriendContact.vue";
 export default {
-    date() {
-        return {
-            friends: [
-                {
-                    id: "manuel",
-                    name: "Manuel Lorenz",
-                    phone: "1234",
-                    email: "manuel@localhost.com",
-                },
-                {
-                    id: "manuel2",
-                    name: "Manuel Lorenz2",
-                    phone: "5678",
-                    email: "manuel2@localhost.com",
-                },
-            ],
-        };
-    },
+    components: { FriendContact },
 };
 </script>
