@@ -3,10 +3,12 @@
         <h2>
             {{ friend.name }}
         </h2>
-        <button @click="toggleDetails">Show Details</button>
+        <button @click="toggleDetails">
+            {{ detailsAreVisible ? "Hide" : "Show" }} Details
+        </button>
         <ul v-if="detailsAreVisible">
             <li><strong>Phone:</strong> {{ friend.phone }}</li>
-            <li><strong>Eamil:</strong> {{ friend.eamil }}</li>
+            <li><strong>Email:</strong> {{ friend.email }}</li>
         </ul>
     </li>
 </template>
@@ -24,7 +26,7 @@ export default {
             },
         };
     },
-    mehotds: {
+    methods: {
         toggleDetails() {
             this.detailsAreVisible = !this.detailsAreVisible;
         },
