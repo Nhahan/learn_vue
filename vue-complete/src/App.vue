@@ -3,7 +3,7 @@
         <header>
             <h1>My Friends</h1>
         </header>
-        <new-friend></new-friend>
+        <new-friend @add-contact="addContact"></new-friend>
         <ul>
             <friend-contact
                 v-for="friend in friends"
@@ -39,6 +39,17 @@ export default {
                 },
             ],
         };
+    },
+    methods: {
+        addContact(name, phone, email) {
+            const newFriendContact = {
+                id: new Date().toISOString(),
+                name: name,
+                phone: phone,
+                email: email,
+            };
+            this.friends.push(newFriendContact);
+        },
     },
 };
 </script>
