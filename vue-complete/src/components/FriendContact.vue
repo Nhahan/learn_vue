@@ -10,6 +10,7 @@
             <li><strong>Phone:</strong> {{ phoneNumber }}</li>
             <li><strong>Email:</strong> {{ emailAddress }}</li>
         </ul>
+        <button @click="this.$emit('delete', id)">Delete</button>
     </li>
 </template>
 
@@ -30,6 +31,7 @@ export default {
             required: true,
         },
     },
+    emits: ["delete"],
     data() {
         return {
             detailsAreVisible: false,
