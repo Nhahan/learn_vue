@@ -20,7 +20,6 @@
 
 <script>
 export default {
-    emits: ["add-contact"],
     data() {
         return {
             enteredName: "",
@@ -31,7 +30,7 @@ export default {
     methods: {
         submitData() {
             this.$emit(
-                "add-content",
+                "addContact",
                 this.enteredName,
                 this.enteredPhone,
                 this.enteredEmail,

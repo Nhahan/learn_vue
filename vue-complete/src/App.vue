@@ -3,17 +3,17 @@
         <header>
             <h1>My Friends</h1>
         </header>
-        <new-friend @add-contact="addContact"></new-friend>
+        <NewFriend @addContact="addContact" />
         <ul>
-            <friend-contact
+            <FriendContact
                 v-for="friend in friends"
                 :key="friend.id"
                 :id="friend.id"
                 :name="friend.name"
                 :phone-number="friend.phone"
                 :email-address="friend.email"
-                @delete="deleteContact"
-            ></friend-contact>
+                @delete="deleteContact(friend.id)"
+            />
         </ul>
     </section>
 </template>
@@ -50,6 +50,7 @@ export default {
                 email: email,
             };
             this.friends.push(newFriendContact);
+            console.log(this.friends);
         },
         deleteContact(friendId) {
             this.friends = this.friends.filter(
