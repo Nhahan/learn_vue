@@ -13,6 +13,7 @@
         <manage-goals
             v-if="selectedComponent === 'manage-goals'"
         ></manage-goals> -->
+        <component :is="selectedComponent"></component>
     </div>
 </template>
 
