@@ -5,7 +5,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['title'],
+};
 </script>
 
 <style></style>
