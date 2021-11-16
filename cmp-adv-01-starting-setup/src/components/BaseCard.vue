@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header>
+        <header v-if="$slots.header">
             <slot name="header"></slot>
         </header>
         <slot></slot>
@@ -8,9 +8,7 @@
 </template>
 
 <script>
-export default {
-    props: ["content"],
-};
+export default {};
 </script>
 
 <style scoped>
