@@ -1,7 +1,15 @@
 <template>
     <section>
-        <ActiveUser />
-        <UserData />
+        <ul>
+            <ActiveUser
+                v-for="user in users"
+                :key="user.id"
+                :id="user.id"
+                :username="user.username"
+                :age="user.age"
+            />
+        </ul>
+        <UserData @submitData="submitData" />
     </section>
 </template>
 
@@ -11,9 +19,25 @@ import UserData from "./components/UserData.vue";
 export default {
     components: { ActiveUser, UserData },
     data() {
-        return {};
+        return {
+            users: [],
+            user: {
+                id: "",
+                username: "",
+                age: "",
+            },
+        };
     },
-    methods: {},
+    methods: {
+        submitData(username, age) {
+            const newUser = {
+                id: new Date().toISOString(),
+                username: username,
+                age: age,
+            };
+            this.users.push(newUser);
+        },
+    },
 };
 </script>
 
@@ -87,5 +111,10 @@ header {
 }
 #app form div {
     margin: 1rem 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 </style>

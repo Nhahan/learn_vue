@@ -1,7 +1,10 @@
 <template>
     <form @submit.prevent="submitData">
-        <input type="text" v-model="username" />
-        <input type="text" v-model="age" />
+        <div>
+            <input type="text" v-model="username" placeholder="Username" />
+        </div>
+        <div><input type="number" v-model="age" placeholder="Age" /></div>
+        <button>Submit</button>
     </form>
 </template>
 
