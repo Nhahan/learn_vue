@@ -1,8 +1,8 @@
 <template>
-  <ul>
+  <div>
     <TheHeader title="RememberMe" />
     <TheResources />
-  </ul>
+  </div>
 </template>
 
 <script>
@@ -10,9 +10,9 @@ import TheHeader from './components/layouts/TheHeader.vue';
 import TheResources from './components/learning-resources/TheResources.vue';
 
 export default {
-  components: { TheHeader, TheResources },
-  data() {
-    return {};
+  components: {
+    TheHeader,
+    TheResources,
   },
 };
 </script>
