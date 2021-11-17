@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  inject: ['addResource'],
   data() {
     return {
       title: '',
@@ -35,7 +36,9 @@ export default {
     };
   },
   methods: {
-    submitData() {},
+    submitData() {
+      this.addResource(this.title, this.description, this.url);
+    },
   },
 };
 </script>
