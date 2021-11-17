@@ -98,6 +98,9 @@
         <label for="how-other">Other</label>
       </div>
     </div>
+    <div>
+      <RatingControl></RatingControl>
+    </div>
     <div class="form-control">
       <input
         type="checkbox"
@@ -114,7 +117,12 @@
 </template>
 
 <script>
+import RatingControl from './RatingControl.vue';
+
 export default {
+  components: {
+    RatingControl,
+  },
   data() {
     return {
       userName: '',
