@@ -4,7 +4,7 @@
       <BaseButton @click="setSelectedTab(StoredResources)"
         >Stored Resources</BaseButton
       >
-      <BaseButton @click="setSelectedTab(AddResources)"
+      <BaseButton @click="setSelectedTab(AddResource)"
         >Add Resources</BaseButton
       >
     </BaseCard>
@@ -20,7 +20,7 @@ export default {
   component: { StoredResources, AddResource },
   data() {
     return {
-      seletedTab: 'stored-resources',
+      selectedTab: StoredResources,
       storedResources: [
         {
           id: 'official-guide',
