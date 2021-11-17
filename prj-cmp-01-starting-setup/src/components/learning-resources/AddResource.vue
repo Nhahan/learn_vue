@@ -1,5 +1,5 @@
 <template>
-  <base-card>
+  <BaseCard>
     <form>
       <div class="form-control">
         <label for="title">Title</label>
@@ -14,10 +14,10 @@
         <input id="link" name="link" type="url" />
       </div>
       <div>
-        <base-button type="submit">Add Resource</base-button>
+        <BaseButton type="submit">Add Resource</BaseButton>
       </div>
     </form>
-  </base-card>
+  </BaseCard>
 </template>
 
 <style scoped>
