@@ -67,7 +67,7 @@ export default {
         description: description,
         link: url,
       };
-      this.storedResources.unshift(newReource);
+      this.storedResources.unshift(newReource); // unshift: push data in front of []
     },
   },
 };
