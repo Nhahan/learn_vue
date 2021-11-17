@@ -42,7 +42,7 @@ export default {
         this.description.trim() === '' ||
         this.link.trim() === ''
       ) {
-        alert('');
+        alert('Empty Input!');
       }
 
       this.addResource(this.title, this.description, this.url);
