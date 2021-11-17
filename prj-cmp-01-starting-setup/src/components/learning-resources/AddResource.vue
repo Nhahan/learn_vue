@@ -37,6 +37,14 @@ export default {
   },
   methods: {
     submitData() {
+      if (
+        this.title.trim() === '' ||
+        this.description.trim() === '' ||
+        this.link.trim() === ''
+      ) {
+        alert('');
+      }
+
       this.addResource(this.title, this.description, this.url);
     },
   },
