@@ -75,10 +75,12 @@ export default {
       this.selectedTab = 'stored-resources';
     },
     removeResource(resId) {
-      const resouceIdx = this.resources.findIdx(
+      console.log(this.storedResources);
+      const resouceIdx = this.storedResources.findIndex(
         (resource) => resource.id === resId
       );
-      this.resources.splice(resouceIdx, 1);
+      this.storedResources.splice(resouceIdx, 1);
+      console.log(resouceIdx, this.storedResources);
     },
   },
 };
