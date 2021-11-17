@@ -99,7 +99,11 @@
       </div>
     </div>
     <div>
-      <RatingControl></RatingControl>
+      <RatingControl
+        v-model="rating"
+        :model-value=""
+        @update:modelValue=""
+      ></RatingControl>
     </div>
     <div class="form-control">
       <input
@@ -120,6 +124,8 @@
 import RatingControl from './RatingControl.vue';
 
 export default {
+  props: ['modelValue'],
+  emits: ['update:modelValue'],
   components: {
     RatingControl,
   },
@@ -131,10 +137,15 @@ export default {
       interest: [],
       how: null,
       confirm: false,
+      rating: null,
       userNameValidity: 'pending',
     };
   },
   methods: {
+    activate(option) {
+      this.activeOption = option;
+      this.$emit('update:modelValue', option);
+    },
     submitForm() {
       console.log('Username: ' + this.userName);
       this.userName = '';
