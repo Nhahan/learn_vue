@@ -63,7 +63,7 @@ export default {
     },
     addResource(title, description, url) {
       const newReource = {
-        id: new Data().toISOString(),
+        id: new Date().toISOString(),
         title: title,
         description: description,
         link: url,
