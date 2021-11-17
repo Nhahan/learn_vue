@@ -68,6 +68,7 @@ export default {
         link: url,
       };
       this.storedResources.unshift(newReource); // unshift: push data in front of []
+      this.selectedTab = 'stored-resources';
     },
   },
 };
