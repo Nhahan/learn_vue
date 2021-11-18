@@ -68,9 +68,9 @@ export default {
           this.error = 'Failed to fetch data - please try again';
         });
     },
-    mounted() {
-      this.loadExperiences;
-    },
+  },
+  mounted() {
+    this.loadExperiences();
   },
 };
 </script>

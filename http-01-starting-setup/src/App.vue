@@ -1,9 +1,7 @@
 <template>
   <div>
-    <learning-survey
-      @add="$refs.userExperiences.loadExperiences()"
-    ></learning-survey>
-    <user-experiences ref="userExperiences"></user-experiences>
+    <learning-survey></learning-survey>
+    <user-experiences></user-experiences>
   </div>
 </template>
 
