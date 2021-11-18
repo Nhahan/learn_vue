@@ -33,7 +33,9 @@ export default {
   },
   methods: {
     loadExperiences() {
-      fetch('https://vue-http-demo-85e9e.firebaseio.com/surveys.json')
+      fetch(
+        'https://vue-http-demo-97fc6-default-rtdb.firebaseio.com/surveys.json'
+      )
         .then((response) => {
           if (response.ok) {
             return response.json();
@@ -50,6 +52,9 @@ export default {
           }
           this.results = results;
         });
+    },
+    mounted() {
+      this.loadExperiences;
     },
   },
 };
