@@ -51,6 +51,7 @@
 
 <script>
 export default {
+  injects: ['loadExperiences', 'results'],
   data() {
     return {
       enteredName: '',
@@ -88,6 +89,8 @@ export default {
 
       this.enteredName = '';
       this.chosenRating = null;
+      this.loadExperiences;
+      this.$emit('add');
     },
   },
 };
