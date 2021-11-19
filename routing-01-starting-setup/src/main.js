@@ -17,6 +17,7 @@ const router = createRouter({
       component: UsersList,
     }, // out-domain.com/users => TeamsList
   ],
+  linkActiveClass: 'active',
 });
 
 const app = createApp(App);
