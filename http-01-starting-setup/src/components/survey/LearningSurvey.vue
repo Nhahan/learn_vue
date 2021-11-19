@@ -102,6 +102,8 @@ export default {
 
       this.enteredName = '';
       this.chosenRating = null;
+
+      this.emitter.emit('load-experiences');
     },
   },
 };

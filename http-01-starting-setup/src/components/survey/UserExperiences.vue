@@ -61,6 +61,7 @@ export default {
             });
           }
           this.results = results;
+          this.emitter.on('load-experiences', this.loadExperiences);
         })
         .catch((error) => {
           console.log(error);
