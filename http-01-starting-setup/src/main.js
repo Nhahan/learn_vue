@@ -6,6 +6,8 @@ import App from './App.vue';
 
 const app = createApp(App);
 
+export const eventBus = new Vue(); // eventBus
+
 app.component('base-card', BaseCard);
 app.component('base-button', BaseButton);
 
