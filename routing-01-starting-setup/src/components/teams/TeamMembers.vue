@@ -33,9 +33,9 @@ export default {
     const selectedMembers = [];
     for (const member of members) {
       const selectedUser = this.users.find((user) => user.id === member);
-      this.selectedMembers.push(selectedUser);
+      selectedMembers.push(selectedUser);
     }
-    this.members = selectedmembers;
+    this.members = selectedMembers;
     this.teamName = selectedTeam.name;
   },
 };
