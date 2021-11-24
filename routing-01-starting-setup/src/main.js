@@ -37,7 +37,14 @@ const router = createRouter({
       redirect: '/',
     },
   ],
-  linkActiveClass: 'active', // CSS perpective: 'route-link-active' to 'active'
+  linkActiveClass: 'active', // CSS perpective: 'route-link-active' to 'active',
+  scrollBehavior(to, from, savedPosition) {
+    return { left: 0, top: 0 };
+  },
+});
+
+router.beforeEach(function (to, from, next) {
+  next();
 });
 
 const app = createApp(App);
