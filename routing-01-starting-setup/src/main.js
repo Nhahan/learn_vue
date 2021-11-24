@@ -22,7 +22,7 @@ const router = createRouter({
       component: TeamMembers,
     }, // out-domain.com/users => UsersList
   ],
-  linkActiveClass: 'active',
+  linkActiveClass: 'active', // CSS perpective: 'route-link-active' to 'active'
 });
 
 const app = createApp(App);
