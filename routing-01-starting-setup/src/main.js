@@ -7,7 +7,7 @@ import UsersList from './components/users/UsersList.vue';
 import TeamMembers from './components/teams/TeamMembers.vue';
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(), // save history of pages that user entered, for example it used when user want to go back
   routes: [
     {
       path: '/teams',
