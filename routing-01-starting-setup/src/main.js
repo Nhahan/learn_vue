@@ -13,6 +13,7 @@ const router = createRouter({
     {
       name: 'teams',
       path: '/teams',
+      meta: { needsAuth: true },
       alias: '/',
       component: TeamsList,
       children: [
