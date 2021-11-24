@@ -9,6 +9,7 @@ import TeamMembers from './components/teams/TeamMembers.vue';
 const router = createRouter({
   history: createWebHistory(), // save history of pages that user entered, for example it used when user want to go back
   routes: [
+    // { path: '/', redirect: '/teams' },
     {
       path: '/teams',
       alias: '/',
@@ -22,6 +23,10 @@ const router = createRouter({
       path: '/teams/:teamId',
       component: TeamMembers,
     }, // out-domain.com/users => UsersList
+    {
+      path: '/:notFound(.*)',
+      redirect: '/',
+    },
   ],
   linkActiveClass: 'active', // CSS perpective: 'route-link-active' to 'active'
 });
