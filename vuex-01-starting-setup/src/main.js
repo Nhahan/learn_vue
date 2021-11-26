@@ -6,23 +6,35 @@ import App from './App.vue';
 const store = createStore({
     state() {
         return {
-            counter: 0
+            counter: 0,
+            isLoggedIn: false,
         };
     },
     mutations: {
         increment(state) {
             state.counter++;
-        }
+        },
+        setAuth(state, payload) {
+            state.isLoggedIn = payload.isAuth;
+        },
     },
     actions: {
         increment(context) {
             setTimeout(() => context.commit('increment'), 2000)
-            
-        }
+        },
+        login(context) {
+            context.commit('setAuth', { isAuth: true });
+        },
+        logout(context) {
+            context.commit('setAuth', { isAuth: false} );
+        },
     },
     getters: {
         finalCounter(state) {
             return state.counter * 2;
+        },
+        userIsAuthenticated(state) {
+            return state.isLoggedIn;
         }
     }
 })
