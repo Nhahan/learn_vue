@@ -1,26 +1,30 @@
 <template>
   <base-container title="Vuex">
     <h3>{{ counter }}</h3>
-    <button @click="addOne">Add 1</button>
+    <button @click="increment">Add 1</button>
   </base-container>
 </template>
 
 <script>
 import BaseContainer from './components/BaseContainer.vue';
+import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
   components: {
     BaseContainer,
   },
   computed: {
-    counter() {
-      return this.$store.getters.finalCounter;
-    }
+    // counter() {
+    //   return this.$store.getters.finalCounter;
+    // }
+    ...mapGetters(['counter'])
   },
   methods: {
-    addOne() {
-      this.$store.dispatch('increment');
-    }
+    // addOne() {
+    //   this.$store.dispatch('increment');
+    // }
+    ...mapActions(['increment'])
   }
 };
 </script>
