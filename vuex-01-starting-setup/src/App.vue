@@ -5,7 +5,7 @@
     </base-container>
     <base-container title="Vuex" v-if="isAuth">
       <h3>{{ finalCounter }}</h3>
-      <button @click="increment">Add 1</button>
+      <button @click="increment">Add 2</button>
     </base-container>
   </div>
 </template>
