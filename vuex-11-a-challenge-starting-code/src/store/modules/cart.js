@@ -38,5 +38,24 @@ export default {
             state.qty -= prodData.qty;
             state.total -= prodData.price * prodData.qty;
         },
+    },
+    actions: {
+        addToCart(context, payload) {
+            context.commit('addProductToCart', payload);
+        },
+        removeFromCart() {
+            context.commit('removeProductFromCart', payload);
+        }
+    },
+    getters: {
+        products(state) {
+            return state.items;
+        },
+        totalSum(state) {
+            return state.total;
+        },
+        quantity(state) {
+            return state.qty;
+        },
     }
 }
