@@ -27,8 +27,19 @@
 <script>
 export default {
   computed: {
-    carQuantity() {
+    cartQuantity() {
       return this.$store.getters['cart/quantity'];
+    },
+    isLogginedIn() {
+      return this.$store.getters.isAuthenticated;
+    }
+  },
+  methods: {
+    login() {
+      this.$store.dispatch('login');
+    },
+    logout() {
+      this.$store.dispatch('logout');
     }
   }
 };
