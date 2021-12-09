@@ -9,7 +9,7 @@
                 <button>Refresh</button>    
                 <router-link to="/register">Register as Coach</router-link>    
             </div> 
-            <li v-for="coach in fileteredCoaches" :key="coach.id">
+            <li v-for="coach in filteredCoaches" :key="coach.id">
                 {{ coach.firstName }}
             </li>
         </section>
@@ -20,7 +20,7 @@
 export default {
     computed: {
         filteredCoaches() {
-            return this.$store.getters.coachedModule;
+            return this.$store.getters['coachesModule/coaches'];
         }
     }
 }
