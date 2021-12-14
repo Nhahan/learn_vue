@@ -6,11 +6,28 @@
             <span v-for="area in areas" :key="area"></span>
         </div>
         <div class="actions">
-            <router-link to="/coaches/c1/contact">Contact</router-link>
-            <router-link to="/coaches/c1">View Details</router-link>
+            <router-link :to="coachesContactLink">Contact</router-link>
+            <router-link :to="coachesDetailsLink">View Details</router-link>
         </div>
     </li>
 </template>
+
+<script>
+export default {
+    props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
+    computed: {
+        fullName() {
+            return this.firstName + ' ' + this.lastName;
+        },
+        coachContactLink() {
+            return '/coaches/' + this.id + 'contact';
+        },
+        coachDetailsLink() {
+            return '/coaches/' + this.id;
+        },
+    }
+}
+</script>
 
 <style scoped>
 li {
