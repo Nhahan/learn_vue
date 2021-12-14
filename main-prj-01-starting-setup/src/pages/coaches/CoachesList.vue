@@ -31,7 +31,7 @@ import CoachItem from '../../components/coaches/CoachItem.vue'
 export default {
     components: {
         CoachItem
-    }
+    },
     computed: {
         filteredCoaches() {
             return this.$store.getters['coachesModule/coaches'];
@@ -39,6 +39,6 @@ export default {
         hasCoaches() {
             return this.$store.getters['coachesModule/hasCoaches'];
         },
-    }
+    },
 }
 </script>
